@@ -1,0 +1,400 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0f101c;
+  /*Backgroun color from Epicode Original Page*/
+  color: white;
+  max-width: 100%;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+.general-container {
+  /*General container with background image*/
+  height: 100%;
+  max-width: 65%;
+  margin: 0 auto;
+  background-image: url(assets/bg.jpg);
+  background-size: cover;
+  overflow: hidden;
+}
+
+.main {
+  /*Container of all the elements*/
+  margin: 0 auto;
+  height: 100%;
+  max-width: auto;
+  padding: 0px 90px;
+}
+
+.row {
+  /*Logo and Timer container*/
+  display: flex;
+  align-items: center;
+  vertical-align: center;
+  justify-content: space-between;
+  padding: 15px 0px;
+  width: auto;
+  margin: 0 auto;
+  height: 15%;
+}
+
+.logo {
+  width: 18%;
+}
+
+.logo img {
+  height: auto;
+  max-width: 100%;
+}
+
+/*HOME.HTML PAGE STARTS HERE*/
+
+.title-line {
+  /*Title container*/
+  margin: 0 auto;
+  width: auto;
+  padding: 20px 0px;
+}
+
+h1 {
+  font-size: 5vw;
+  font-family: "Outfit", sans-serif;
+  font-weight: normal;
+  line-height: 4vw;
+  opacity: 0.9;
+}
+
+.instructions-line {
+  /*Instructions container*/
+  padding: 20px 0px;
+  font-family: "Inter", sans-serif;
+  font-size: 1vw;
+  opacity: 0.9;
+  font-weight: 200;
+}
+
+.instructions-line h2 {
+  font-size: 2vw;
+  color: #d20094;
+  font-family: "Outfit", sans-serif;
+  font-weight: bold;
+}
+
+ul {
+  padding: 30px
+}
+
+li {
+  padding-top: 6px;
+}
+
+#bottom {
+  /*Checkbox and Proceed Button container*/
+  font-family: "Inter", sans-serif;
+  font-size: 1vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+#check {
+  display: flex;
+  flex-direction: row;
+}
+
+#check p {
+  padding: 0 15px;
+}
+
+#checkbox {
+  transform: scale(1.6);
+  accent-color: #00ffff;
+}
+
+#start-button {
+  background-color: #00ffff;
+  border: none;
+  cursor: pointer;
+  font-family: "Outfit", sans-serif;
+  font-size: 1.5vw;
+  font-weight: bold;
+  padding: 0.7em 2.5em;
+}
+
+#start-button:enabled {
+  box-shadow: 0 0 2em 0 #00ffff;
+}
+
+/*TEST.HTML PAGE STARTS HERE*/
+
+.timer-container {
+  width: 90px;
+  height: 90px;
+}
+
+#timer {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  color: white;
+  opacity: 0.9;
+  font-family: "Inter", sans-serif;
+  font-size: 2.5vw;
+  font-weight: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    background-color: #00ffff;
+  }
+
+  50% {
+    background-color: #d20094;
+
+  }
+}
+
+#quiz-container {
+  /*Questions and Answers Container*/
+  height: auto;
+  margin: 0 auto;
+}
+
+#question {
+  /*Question and Final Result tex Container*/
+  text-align: center;
+  font-size: 2.5vw;
+  font-family: "Outfit", sans-serif;
+  font-weight: normal;
+  opacity: 0.9;
+  height: 100px;
+  max-width: 100%;
+  padding: 30px 0px 20px 0px;
+}
+
+#answers {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  padding: 40px 0px;
+  height: 150px;
+}
+
+#answers button {
+  background-color: #23294f;
+  opacity: 0.7;
+  height: fit-content;
+  border-radius: 30px;
+  border-style: outset;
+  border-color: white;
+  font-family: "Outfit", sans-serif;
+  font-size: 1.5vw;
+  color: white;
+  font-weight: normal;
+  padding: 1vw 2vw;
+  margin: 0.5vw 1vw;
+  cursor: pointer;
+  vertical-align: center;
+}
+
+#answers button:hover {
+  background: linear-gradient(180deg,
+      rgba(210, 0, 148, 1) 36%,
+      rgba(107, 38, 87, 1) 100%);
+}
+
+#questionCountLabel {
+  /*Number of the question*/
+  font-family: "Outfit", sans-serif;
+  display: flex;
+  justify-content: center;
+  font-size: 1.2vw;
+  opacity: 0.9;
+  letter-spacing: 1px;
+  font-weight: 500;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+
+/*HERE STARTS THE RESULT PAGE*/
+#question .yourResults {
+  font-size: 3vw;
+  font-weight: bold;
+  line-height: 0.1vw;
+  margin-bottom: 0;
+}
+
+#question .yourMessage {
+  font-size: 1.5vw;
+  font-weight: normal;
+  margin-top: 0;
+  line-height: 0.1vw;
+
+}
+
+#results {
+  /*Results Percentage and Chart container*/
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px 10px 20px;
+  font-family: "Outfit";
+  opacity: 0.9;
+}
+
+.chart-container {
+  width: 200px;
+}
+
+#correct {
+  text-align: left;
+  width: 200px;
+  line-height: 2.5vw;
+
+}
+
+#incorrect {
+  text-align: right;
+  width: 200px;
+  line-height: 2.5vw;
+}
+
+#correct .rightwrong,
+#incorrect .rightwrong {
+  font-size: 3.5vw;
+  font-weight: 300;
+}
+
+#correct .percentage,
+#incorrect .percentage {
+  font-size: 3.5vw;
+  font-weight: bold;
+}
+
+#correct .totalQ,
+#incorrect .totalQ {
+  font-size: 1vw;
+}
+
+
+#rateContainer {
+  /*Rating Button container*/
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5%;
+}
+
+
+#rateContainer button {
+  background-color: #00ffff;
+  border: none;
+  cursor: pointer;
+  font-family: "Outfit", sans-serif;
+  font-size: 1.5vw;
+  font-weight: bold;
+  padding: 0.7em 2.75em;
+}
+
+#rateContainer button:hover {
+  box-shadow: 0 0 2em 0 #00ffff;
+}
+
+
+/*RATE.HTML PAGE STARTS HERE*/
+
+.ratingpage {
+  text-align: center;
+  font-family: "Outfit", sans-serif;
+  margin: 0 auto;
+  max-width: auto;
+  padding: 0px 60px;
+}
+
+.ratingpage h2 {
+  font-size: 3vw;
+  font-family: "Outfit", sans-serif;
+  font-weight: bold;
+  opacity: 0.9;
+  padding-bottom: 10px;
+}
+
+.ratingpage p {
+  font-size: 1.6vw;
+  padding: 10px 10px;
+  font-weight: 200;
+}
+
+.rating {
+  /*Rating Stars Container*/
+  text-align: center;
+}
+
+.submit-feeback {
+  /*Rating comment and Submit Button container*/
+  text-align: center;
+  font-family: "outfit", sans-serif;
+  font-size: 1.7vw;
+  font-weight: 200;
+  padding: 10px 0;
+  margin: 0 auto;
+}
+
+form {
+  padding-bottom: 40px;
+  width: 100%;
+}
+
+.rate {
+  /*Rating comment*/
+  width: 100%;
+  background-color: transparent;
+  border-style: none;
+  border-bottom: solid 2px #d20094;
+  outline: none;
+  font-family: "outfit", sans-serif;
+  font-size: 1.2vw;
+  color: white;
+}
+
+.submit-feeback button {
+  background-color: #00ffff;
+  border: none;
+  cursor: pointer;
+  font-family: "Outfit", sans-serif;
+  font-size: 1.3vw;
+  font-weight: bold;
+  padding: 0.7em 2.5em;
+}
+
+.submit-feeback button:hover {
+  box-shadow: 0 0 2em 0 #00ffff;
+}
+
+#userReview {
+  /*the review is shown*/
+  padding-top: 20px;
+}
+
+#userReview img {
+  height: 30px;
+}

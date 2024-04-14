@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+
+  <title>Test</title>
+</head>
+
+<body>
+  <div class="general-container">
+    <div class="main">
+      <div class="row"> <!--Logo and Timer Container-->
+        <div class="logo">
+          <img src="assets/epicode_logo.png" alt="logo" />
+        </div>
+        <div class="timer-container">
+          <circle id="timer" cx="70" cy="70" r="70"></circle>
+        </div>
+
+      </div>
+      <div id="quiz-container"> <!--Question and Answers container-->
+        <p id="question"></p>
+        <div id="answers"></div>
+      </div>
+      <div>
+        <label id="questionCountLabel"></label> <!--Number of Question Container-->
+      </div>
+      <!--Slide 3 with results starts here-->
+      <div id="results"> <!--Results percentage and chart container -->
+        <p id="correct"></p>
+        <div class="chart-container">
+          <canvas id="resultChart"></canvas>
+        </div>
+        <p id="incorrect"></p>
+      </div>
+      <div id="rateContainer"> <!--Rating Button container-->
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js" defer></script>
+</body>
+
+</html>
